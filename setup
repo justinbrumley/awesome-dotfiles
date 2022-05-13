@@ -12,3 +12,6 @@ if command -v pacman &> /dev/null; then
 elif command -v apt &> /dev/null; then
   sudo apt update && sudo apt install ripgrep
 fi
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
