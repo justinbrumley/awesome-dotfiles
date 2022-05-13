@@ -24,7 +24,4 @@ stow vim
 stow tmux
 stow xmodmap
 stow awesome
-
-# Remove existing files so we can stow zsh config
-rm -f ../.zshrc && rm -rf ../.oh-my-zsh/themes/
 stow zsh
