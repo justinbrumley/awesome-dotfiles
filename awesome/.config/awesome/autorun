@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 run() {
-  if ! pgrep -f "$1" ;
+  if ! pgrep -f "$1" && command -v "$1" &> /dev/null;
   then
     "$@"&
   fi
@@ -9,6 +9,4 @@ run() {
 
 run picom
 run nm-applet
-
-# Start connection to protonvpn
 run protonvpn-cli c -f

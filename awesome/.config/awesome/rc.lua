@@ -16,7 +16,7 @@ require("configuration");
 -- ============================================
 
 -- Auto run stuff
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("~/.config/awesome/autorun")
 -- ============================================
 
 -- Setup Theme
