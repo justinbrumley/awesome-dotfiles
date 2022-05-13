@@ -1,22 +1,39 @@
 #!/bin/bash
 
 # Get Vundle so plugins can be easily managed
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-# Install plugins from .vimrc
-vi -c ":PluginInstall" -c ":q" -c ":q"
-
-# Try to install ripgrep
-if command -v pacman &> /dev/null; then
-  sudo pacman -Sqy ripgrep
-elif command -v apt &> /dev/null; then
-  sudo apt update && sudo apt install ripgrep
+if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
+  git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 
-# Try to install py-wal
+# Install plugins from .vimrc
+vim -c ":PluginInstall" -c ":q" -c ":q"
+
+# Automatically install a few dependencies if they aren't already installed
 if command -v pacman &> /dev/null; then
-  sudo pacman -Sqy python-pywal
+  if ! command -v stow &> /dev/null; then
+    echo "Installing stow..."
+    sudo pacman -S --noconfirm stow
+  fi
+
+  if ! command -v rg &> /dev/null; then
+    echo "Installing rg..."
+    sudo pacman -Sqy --noconfirm ripgrep
+  fi
+
+  if ! command -v wal &> /dev/null; then
+    echo "Installing pywal..."
+    sudo pacman -Sqy --noconfirm python-pywal
+  fi
 fi
 
 # Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Stow configs
+stow vim
+stow zsh
+stow tmux
+stow xmodmap
+stow awesome
