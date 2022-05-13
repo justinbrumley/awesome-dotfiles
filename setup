@@ -8,9 +8,14 @@ vi -c ":PluginInstall" -c ":q" -c ":q"
 
 # Try to install ripgrep
 if command -v pacman &> /dev/null; then
-  sudo pacman -S ripgrep
+  sudo pacman -Sqy ripgrep
 elif command -v apt &> /dev/null; then
   sudo apt update && sudo apt install ripgrep
+fi
+
+# Try to install py-wal
+if command -v pacman &> /dev/null; then
+  sudo pacman -Sqy python-pywal
 fi
 
 # Install oh-my-zsh
