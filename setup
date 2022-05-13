@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Automatically install a few dependencies if they aren't already installed
+if command -v pacman &> /dev/null; then
+  echo "Installing packages..."
+  sudo pacman -S --noconfirm exa stow ripgrep python-pywal tmux vim
+fi
+
 # Get Vundle so plugins can be easily managed
 if [ ! -d "$HOME/.vim/bundle/Vundle.vim" ]; then
   git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
@@ -8,24 +14,6 @@ fi
 # Install plugins from .vimrc
 vim -c ":PluginInstall" -c ":q" -c ":q"
 
-# Automatically install a few dependencies if they aren't already installed
-if command -v pacman &> /dev/null; then
-  if ! command -v stow &> /dev/null; then
-    echo "Installing stow..."
-    sudo pacman -S --noconfirm stow
-  fi
-
-  if ! command -v rg &> /dev/null; then
-    echo "Installing rg..."
-    sudo pacman -Sqy --noconfirm ripgrep
-  fi
-
-  if ! command -v wal &> /dev/null; then
-    echo "Installing pywal..."
-    sudo pacman -Sqy --noconfirm python-pywal
-  fi
-fi
-
 # Install oh-my-zsh
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -33,7 +21,10 @@ fi
 
 # Stow configs
 stow vim
-stow zsh
 stow tmux
 stow xmodmap
 stow awesome
+
+# Remove existing files so we can stow zsh config
+rm -f ../.zshrc && rm -rf ../.oh-my-zsh/themes/
+stow zsh

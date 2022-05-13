@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="pygmalion"
 
-plugins=(git go doctl ripgrep gcloud tmux heroku rust docker docker-compose)
+plugins=(git golang doctl ripgrep gcloud tmux heroku rust docker docker-compose)
 
 # Transparent background support
 export TERM=xterm-256color
@@ -17,7 +17,9 @@ eval $(thefuck --alias)
 export PATH=$PATH:~/.npm-global/bin
 
 # Import colorscheme from 'wal'
-cat $HOME/.cache/wal/sequences
+if [ -d "$HOME/.cache/wal" ]; then
+  cat $HOME/.cache/wal/sequences
+fi
 
 # Disable caps lock and enable hjkl arrow keys
 # Useful if I can't remap keys on a keeb
