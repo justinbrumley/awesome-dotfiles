@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get Vundle so plugins can be easily managed
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Install plugins from .vimrc
+vi -c ":PluginInstall" -c ":q" -c ":q"
+
+# Try to install ripgrep
+if command -v pacman &> /dev/null; then
+  sudo pacman -S ripgrep
+elif command -v apt &> /dev/null; then
+  sudo apt update && sudo apt install ripgrep
+fi
