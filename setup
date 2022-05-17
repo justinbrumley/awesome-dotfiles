@@ -26,5 +26,5 @@ stow xmodmap
 stow awesome
 
 # Manually stow zsh stuff since stow doesn't own .oh-my-zsh
-ln zsh/.zshrc $HOME/.zshrc
-ln zsh/.oh-my-zsh/themes/pygmalion.zsh-theme $HOME/.oh-my-zsh/themes/pygmalion.zsh-theme
+ln -f zsh/.zshrc $HOME/.zshrc
+ln -f zsh/.oh-my-zsh/themes/pygmalion.zsh-theme $HOME/.oh-my-zsh/themes/pygmalion.zsh-theme
