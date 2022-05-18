@@ -4,7 +4,7 @@ local beautiful = require("beautiful")
 -- ============================================
 
 local home = os.getenv("HOME")
-local theme_path = string.format("%s/.config/awesome/theme", os.getenv("HOME"))
+local theme_path = string.format("%s/.config/awesome/theme/", os.getenv("HOME"))
 
 local primary_wallpaper = theme_path.."anime.png"
 local secondary_wallpaper = theme_path.."waves.jpg"
