@@ -9,4 +9,4 @@ run() {
 
 run picom
 run nm-applet
-run protonvpn-cli c -f
+# run protonvpn-cli c -f
