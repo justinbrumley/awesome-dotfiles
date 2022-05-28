@@ -53,7 +53,7 @@ local function render_taglist(s)
       layout = wibox.container.margin,
     },
     shape = gears.shape.rounded_rect,
-    bg = beautiful.bg_light,
+    bg = beautiful.bg_normal,
     layout = wibox.container.background,
   }
 end

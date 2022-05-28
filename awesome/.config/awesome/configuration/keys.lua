@@ -19,6 +19,12 @@ globalkeys = gears.table.join(
       awful.util.spawn("amixer -c 3 set Speaker 1%-")
     end),
 
+    -- Toggle systray
+    awful.key({ modkey }, "=", function ()
+      awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
+    end),
+
+
     -- Move between tags
     awful.key({ modkey,           }, "w",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
