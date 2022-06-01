@@ -79,7 +79,7 @@ awful.screen.connect_for_each_screen(function(s)
       {
         {
           {
-            image = "/home/justin/.config/awesome/icons/slack-indicator.svg",
+            image = "/home/justin/.config/awesome/icons/slack/slack-indicator.svg",
             widget = wibox.widget.imagebox,
           },
           spacing = 10,
@@ -99,7 +99,7 @@ awful.screen.connect_for_each_screen(function(s)
       {
         {
           {
-            image = "/home/justin/.config/awesome/icons/discord-tray.svg",
+            image = "/home/justin/.config/awesome/icons/discord/discord-tray.svg",
             widget = wibox.widget.imagebox,
           },
           spacing = 10,
@@ -119,7 +119,7 @@ awful.screen.connect_for_each_screen(function(s)
       {
         {
           {
-            image = "/home/justin/.config/awesome/icons/spotify-indicator.svg",
+            image = "/home/justin/.config/awesome/icons/spotify/spotify-indicator.svg",
             widget = wibox.widget.imagebox,
           },
           spacing = 10,
@@ -139,11 +139,11 @@ awful.screen.connect_for_each_screen(function(s)
       {
         {
           {
-            image = "/home/justin/.config/awesome/icons/volume-level-high.svg",
+            image = "/home/justin/.config/awesome/icons/volume/volume-level-high.svg",
             widget = wibox.widget.imagebox,
           },
           {
-            image = "/home/justin/.config/awesome/icons/network-wired.svg",
+            image = "/home/justin/.config/awesome/icons/network/network-wired.svg",
             widget = wibox.widget.imagebox,
           },
           spacing = 10,
