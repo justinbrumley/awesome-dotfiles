@@ -24,4 +24,4 @@ Script might need to be ran multiple times because of the oh-my-zsh installer
 
 ## Screenshots (AwesomeWM)
 
-![1](https://user-images.githubusercontent.com/7034681/168401251-1db8db8b-a9fe-46b1-9a12-d1532eed8a96.png)
+![2](https://user-images.githubusercontent.com/7034681/171491942-1e752074-d59c-4ef3-9e1b-5f0654e0c68b.png)
