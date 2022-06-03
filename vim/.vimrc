@@ -22,6 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -105,7 +106,6 @@ set encoding=utf-8
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
-" let g:airline_theme='tagboard'
 
 " Only show filename for buffers
 let g:airline#extensions#tabline#fnamemod = ':t'
@@ -125,3 +125,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "mode": "active" }
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
+
+" Rust
+let g:rustfmt_autosave = 1
