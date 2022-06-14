@@ -4,6 +4,9 @@ local naughty = require('naughty')
 local gears = require("gears")
 local beautiful = require('beautiful')
 
+local xresources = require("beautiful.xresources")
+local dpi = xresources.apply_dpi
+
 local checked_checkbox = wibox.widget {
   widget = wibox.widget.checkbox,
   checked = true,
@@ -22,14 +25,14 @@ local function render_taglist(s)
       shape = gears.shape.circle
     },
     layout   = {
-      spacing = 10,
+      spacing = dpi(10),
       layout  = wibox.layout.fixed.vertical,
     },
     widget_template = {
       {
         {
           {
-            margins = 10,
+            margins = dpi(10),
             layout = wibox.container.margin,
           },
           id = 'background_role',
@@ -49,7 +52,7 @@ local function render_taglist(s)
   return wibox.widget {
     {
       s.taglist_widget,
-      margins = 10,
+      margins = dpi(10),
       layout = wibox.container.margin,
     },
     shape = gears.shape.rounded_rect,
