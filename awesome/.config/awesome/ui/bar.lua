@@ -76,6 +76,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
 
+    --[[
     -- TODO: Move each widget to their own file to handle logic
     -- Just placeholder images for now
     { -- check notifications for unread slack?
@@ -161,6 +162,8 @@ awful.screen.connect_for_each_screen(function(s)
     },
 
     { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
+
+    --]]
 
     { -- Real Systray, hidden by default
       {

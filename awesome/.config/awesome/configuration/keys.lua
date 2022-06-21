@@ -19,6 +19,14 @@ globalkeys = gears.table.join(
       awful.util.spawn("amixer -c 3 set Speaker 1%-")
     end),
 
+    -- Volume Shortcuts
+    awful.key({ modkey, "Shift"   }, "=",   function()
+      awful.util.spawn("amixer -c 3 set Speaker 1%+")
+    end, {description = "Increase Volume"}),
+    awful.key({ modkey,           }, "-",   function()
+      awful.util.spawn("amixer -c 3 set Speaker 1%-")
+    end, {description = "Decrease Volume"}),
+
     -- Toggle systray
     awful.key({ modkey }, "=", function ()
       awful.screen.focused().systray.visible = not awful.screen.focused().systray.visible
