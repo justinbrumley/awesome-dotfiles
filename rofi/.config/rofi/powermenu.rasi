@@ -2,7 +2,7 @@ configuration {
     font:                         "JetBrainsMono Nerd Font 16";
     show-icons:                   false;
     click-to-exit: 		  true;
-    location:                     4;
+    location:                     1;
 }
 
 @import "colors.rasi"
@@ -15,8 +15,8 @@ window {
     width:                          60px;
     border:                         0px;
     border-radius:                  0px;
-    x-offset:                       -11px;
-    y-offset:                       0px;
+    x-offset:                       80;
+    y-offset:                       30;
 }
 
 listview {
