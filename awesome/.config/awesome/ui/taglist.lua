@@ -50,14 +50,9 @@ local function render_taglist(s)
   }
 
   return wibox.widget {
-    {
-      s.taglist_widget,
-      margins = dpi(10),
-      layout = wibox.container.margin,
-    },
-    shape = gears.shape.rounded_rect,
-    bg = beautiful.bg_normal,
-    layout = wibox.container.background,
+    s.taglist_widget,
+    margins = dpi(10),
+    layout = wibox.container.margin,
   }
 end
 

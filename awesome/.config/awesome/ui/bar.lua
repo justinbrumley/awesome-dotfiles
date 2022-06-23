@@ -56,132 +56,100 @@ awful.screen.connect_for_each_screen(function(s)
 
   -- Add widgets to the wibox
   s.mywibar:setup {
-    {
-      {
-        s.clock,
-        top = dpi(12),
-        bottom = dpi(12),
-        left = dpi(6),
-        right = dpi(6),
-        layout = wibox.container.margin,
-      },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
-    },
-
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
-
     require('ui.taglist')(s),
 
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
+    {
+      { layout = wibox.container.margin },
+      { layout = wibox.container.margin },
 
-    --[[
-    -- TODO: Move each widget to their own file to handle logic
-    -- Just placeholder images for now
-    { -- check notifications for unread slack?
       {
-        {
+        { -- Real Systray, hidden by default
           {
-            image = "/home/justin/.config/awesome/icons/slack/slack-indicator.svg",
-            widget = wibox.widget.imagebox,
+            s.systray,
+            layout = wibox.layout.align.vertical,
           },
-          spacing = dpi(10),
-          layout = wibox.layout.fixed.vertical,
+          top = 0,
+          bottom = 0,
+          left = dpi(12),
+          right = dpi(12),
+          layout = wibox.container.margin,
         },
-        margins = dpi(12),
-        layout = wibox.container.margin,
+
+        require('ui.systray')(s),
+        layout = wibox.layout.fixed.vertical,
       },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
+
+      layout = wibox.layout.align.vertical,
     },
 
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
-
-    { -- check notifications for unread discord?
-      {
-        {
-          {
-            image = "/home/justin/.config/awesome/icons/discord/discord-tray.svg",
-            widget = wibox.widget.imagebox,
-          },
-          spacing = dpi(10),
-          layout = wibox.layout.fixed.vertical,
-        },
-        margins = dpi(12),
-        layout = wibox.container.margin,
-      },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
+    {
+      s.clock,
+      top = dpi(12),
+      bottom = dpi(12),
+      left = dpi(6),
+      right = dpi(6),
+      layout = wibox.container.margin,
     },
 
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
-
-    { -- Pause/Resume spotify on click w/playerctl
-      {
-        {
-          {
-            image = "/home/justin/.config/awesome/icons/spotify/spotify-indicator.svg",
-            widget = wibox.widget.imagebox,
-          },
-          spacing = dpi(10),
-          layout = wibox.layout.fixed.vertical,
-        },
-        margins = dpi(12),
-        layout = wibox.container.margin,
-      },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
-    },
-
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
-
-    { -- Get volume and network information and update icons based on status
-      {
-        {
-          {
-            image = "/home/justin/.config/awesome/icons/volume/volume-level-high.svg",
-            widget = wibox.widget.imagebox,
-          },
-          {
-            image = "/home/justin/.config/awesome/icons/network/network-wired.svg",
-            widget = wibox.widget.imagebox,
-          },
-          spacing = dpi(10),
-          layout = wibox.layout.fixed.vertical,
-        },
-        margins = dpi(12),
-        layout = wibox.container.margin,
-      },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
-    },
-
-    { widget = wibox.container.margin, bottom = beautiful.useless_gap }, -- spacer
-
-    --]]
-
-    { -- Real Systray, hidden by default
-      {
-        {
-          s.systray,
-          layout = wibox.layout.align.vertical,
-        },
-        top = 0,
-        bottom = 0,
-        left = dpi(12),
-        right = dpi(12),
-        layout = wibox.container.margin,
-      },
-      bg = beautiful.bg_normal,
-      shape = gears.shape.rounded_rect,
-      layout = wibox.container.background,
-    },
-
-    layout = wibox.layout.fixed.vertical,
+    layout = wibox.layout.align.vertical,
   }
 end)
+
+-- Stuff, eventually
+--[[
+-- TODO: Move each widget to their own file to handle logic
+-- Just placeholder images for now
+{ -- check notifications for unread slack?
+  {
+    {
+      {
+        image = "/home/justin/.config/awesome/icons/slack/slack-indicator.svg",
+        widget = wibox.widget.imagebox,
+      },
+      spacing = dpi(10),
+      layout = wibox.layout.fixed.vertical,
+    },
+    margins = dpi(12),
+    layout = wibox.container.margin,
+  },
+  bg = beautiful.bg_normal,
+  shape = gears.shape.rounded_rect,
+  layout = wibox.container.background,
+},
+
+{ -- check notifications for unread discord?
+  {
+    {
+      {
+        image = "/home/justin/.config/awesome/icons/discord/discord-tray.svg",
+        widget = wibox.widget.imagebox,
+      },
+      spacing = dpi(10),
+      layout = wibox.layout.fixed.vertical,
+    },
+    margins = dpi(12),
+    layout = wibox.container.margin,
+  },
+  bg = beautiful.bg_normal,
+  shape = gears.shape.rounded_rect,
+  layout = wibox.container.background,
+},
+
+{ -- Pause/Resume spotify on click w/playerctl
+  {
+    {
+      {
+        image = "/home/justin/.config/awesome/icons/spotify/spotify-indicator.svg",
+        widget = wibox.widget.imagebox,
+      },
+      spacing = dpi(10),
+      layout = wibox.layout.fixed.vertical,
+    },
+    margins = dpi(12),
+    layout = wibox.container.margin,
+  },
+  bg = beautiful.bg_normal,
+  shape = gears.shape.rounded_rect,
+  layout = wibox.container.background,
+},
+--]]

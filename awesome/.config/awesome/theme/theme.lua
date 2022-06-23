@@ -33,7 +33,7 @@ theme.notification_icon_size = dpi(64)
 
 -- Taglist
 theme.taglist_bg_normal = '#9e9d9e'
-theme.taglist_bg_focus = '#7499ad'
+theme.taglist_bg_focus = '#bf616a'
 theme.taglist_bg_urgent = '#9e9d9e'
 
 -- Systray
@@ -46,6 +46,6 @@ theme.useless_gap = dpi(15)
 
 theme.fade_duration = 250
 
-theme.wibar_bg = theme.transparent
+-- theme.wibar_bg = theme.transparent
 
 return theme
