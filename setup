@@ -3,7 +3,7 @@
 # Automatically install a few dependencies if they aren't already installed
 if command -v pacman &> /dev/null; then
   echo "Installing packages..."
-  sudo pacman -S --noconfirm exa stow ripgrep python-pywal tmux vim alacritty
+  sudo pacman -S --noconfirm exa stow ripgrep python-pywal tmux vim alacritty neovim
 fi
 
 # Get Vundle so plugins can be easily managed
