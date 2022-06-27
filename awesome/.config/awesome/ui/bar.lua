@@ -22,7 +22,7 @@ awful.screen.connect_for_each_screen(function(s)
   awful.placement.left(s.mywibar, { margins = beautiful.useless_gap })
 
   -- Create a textclock widget
-  s.clock = wibox.widget.textclock('<span color="#ffffff" font="Fira Code 15">%H%n%M</span>', 5)
+  s.clock = wibox.widget.textclock('<span color="#9e9d9e" font="Fira Code 15">%H%n%M</span>', 5)
   s.clock.align = "center"
 
   -- Remove wibar on full screen
@@ -56,7 +56,21 @@ awful.screen.connect_for_each_screen(function(s)
 
   -- Add widgets to the wibox
   s.mywibar:setup {
-    require('ui.taglist')(s),
+    {
+      {
+        {
+          image = "/home/justin/.config/awesome/icons/arch/arch.svg",
+          widget = wibox.widget.imagebox,
+        },
+        top = dpi(12),
+        bottom = dpi(12),
+        left = dpi(12),
+        right = dpi(12),
+        layout = wibox.container.margin,
+      },
+      require('ui.taglist')(s),
+      layout = wibox.layout.fixed.vertical,
+    },
 
     {
       { layout = wibox.container.margin },
@@ -94,62 +108,3 @@ awful.screen.connect_for_each_screen(function(s)
     layout = wibox.layout.align.vertical,
   }
 end)
-
--- Stuff, eventually
---[[
--- TODO: Move each widget to their own file to handle logic
--- Just placeholder images for now
-{ -- check notifications for unread slack?
-  {
-    {
-      {
-        image = "/home/justin/.config/awesome/icons/slack/slack-indicator.svg",
-        widget = wibox.widget.imagebox,
-      },
-      spacing = dpi(10),
-      layout = wibox.layout.fixed.vertical,
-    },
-    margins = dpi(12),
-    layout = wibox.container.margin,
-  },
-  bg = beautiful.bg_normal,
-  shape = gears.shape.rounded_rect,
-  layout = wibox.container.background,
-},
-
-{ -- check notifications for unread discord?
-  {
-    {
-      {
-        image = "/home/justin/.config/awesome/icons/discord/discord-tray.svg",
-        widget = wibox.widget.imagebox,
-      },
-      spacing = dpi(10),
-      layout = wibox.layout.fixed.vertical,
-    },
-    margins = dpi(12),
-    layout = wibox.container.margin,
-  },
-  bg = beautiful.bg_normal,
-  shape = gears.shape.rounded_rect,
-  layout = wibox.container.background,
-},
-
-{ -- Pause/Resume spotify on click w/playerctl
-  {
-    {
-      {
-        image = "/home/justin/.config/awesome/icons/spotify/spotify-indicator.svg",
-        widget = wibox.widget.imagebox,
-      },
-      spacing = dpi(10),
-      layout = wibox.layout.fixed.vertical,
-    },
-    margins = dpi(12),
-    layout = wibox.container.margin,
-  },
-  bg = beautiful.bg_normal,
-  shape = gears.shape.rounded_rect,
-  layout = wibox.container.background,
-},
---]]
