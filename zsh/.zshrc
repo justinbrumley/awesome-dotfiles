@@ -12,8 +12,6 @@ source $ZSH/oh-my-zsh.sh
 alias vi="vim"
 alias ls="exa"
 
-eval $(thefuck --alias)
-
 export PATH=$PATH:~/.npm-global/bin
 
 # Import colorscheme from 'wal'
