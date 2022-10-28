@@ -32,9 +32,9 @@ theme.fg_minimize   = "#ffffff"
 theme.notification_icon_size = dpi(64)
 
 -- Taglist
-theme.taglist_bg_normal = '#9e9d9e'
-theme.taglist_bg_focus = '#bf616a'
-theme.taglist_bg_urgent = '#9e9d9e'
+theme.taglist_bg_normal = '#939a97'
+theme.taglist_bg_focus = '#d1ab96'
+theme.taglist_bg_urgent = '#939a97'
 
 -- Systray
 theme.systray_icon_spacing = dpi(10)

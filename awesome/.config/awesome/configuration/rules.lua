@@ -35,8 +35,12 @@ awful.rules.rules = {
           "Yubico Authenticator",
           "veromix",
           "xtightvncviewer",
-          "Zoom ",
-          "zoom ",
+          "zoom",
+          "pavucontrol",
+          "Pavucontrol",
+          "lutris",
+          "Lutris",
+          "protonvpn",
         },
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
@@ -45,6 +49,8 @@ awful.rules.rules = {
           "Chat", -- Zoom Chat
           "Zoom Meeting",
           "Zoom Cloud Meetings",
+          "Lutris",
+          "ProtonVPN",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.

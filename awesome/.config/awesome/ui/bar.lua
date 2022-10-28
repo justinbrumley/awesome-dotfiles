@@ -43,7 +43,7 @@ awful.screen.connect_for_each_screen(function(s)
 
   s.systray = wibox.widget.systray()
   s.systray.set_horizontal(false)
-  s.systray.visible = false
+  s.systray.visible = true
 
   -- Hide bar when a splash widget is visible
   awesome.connect_signal("widgets::splash::visibility", function(vis)
@@ -89,7 +89,7 @@ awful.screen.connect_for_each_screen(function(s)
           layout = wibox.container.margin,
         },
 
-        require('ui.systray')(s),
+        -- require('ui.systray')(s),
         layout = wibox.layout.fixed.vertical,
       },
 

@@ -25,6 +25,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
 Plugin 'rust-lang/rust.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 vundle#end()
 
 filetype plugin indent on
