@@ -26,6 +26,9 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'wavded/vim-stylus'
 Plugin 'rust-lang/rust.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+
+# Advent of Code
+Plugin 'udalov/kotlin-vim'
 vundle#end()
 
 filetype plugin indent on
