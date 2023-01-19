@@ -18,8 +18,8 @@ theme.font          = "Fira Sans 8"
 
 theme.border_width = 0
 
-theme.bg_normal     = "#1c1f27"
-theme.bg_light      = "#2E3340"
+theme.bg_normal     = "#080809"
+theme.bg_light      = "#15498a"
 theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
@@ -32,8 +32,8 @@ theme.fg_minimize   = "#ffffff"
 theme.notification_icon_size = dpi(64)
 
 -- Taglist
-theme.taglist_bg_normal = '#939a97'
-theme.taglist_bg_focus = '#d1ab96'
+theme.taglist_bg_normal = '#b4a1a1'
+theme.taglist_bg_focus = '#da2e2e'
 theme.taglist_bg_urgent = '#939a97'
 
 -- Systray

@@ -14,7 +14,7 @@ awful.screen.connect_for_each_screen(function(s)
     position = "left",
     screen = s,
     width = dpi(50),
-    height = s.geometry.height - (beautiful.useless_gap * 4),
+    height = s.geometry.height - (beautiful.useless_gap * 12),
     ontop = true,
     visible = true,
   })
