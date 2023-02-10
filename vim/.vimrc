@@ -51,6 +51,19 @@ else
   endif
 endif
 
+# Netrw File Tree
+g:netrw_banner = 0
+g:netrw_liststyle = 3
+g:netrw_browse_split = 4
+g:netrw_altv = 1
+g:netrw_winsize = 15
+
+# augroup ProjectDrawer
+#   autocmd!
+#   autocmd VimEnter * :Vexplore
+#   autocmd VimEnter * wincmd l
+# augroup END
+
 # Open Quickfix
 nnoremap <C-c> :copen<CR>
 
