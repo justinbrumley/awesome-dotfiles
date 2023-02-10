@@ -8,7 +8,7 @@ local theme_path = string.format("%s/.config/awesome/theme/", os.getenv("HOME"))
 
 -- Possible Wallpapers: anime.png, waves.jpg, desert.png, scenary.png
 
-local primary_wallpaper = theme_path.."red.png"
+local primary_wallpaper = theme_path.."archlinux.png"
 local secondary_wallpaper = theme_path.."scenary.png"
 -- ============================================
 
@@ -38,5 +38,5 @@ screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
-    awful.tag({ "1", "2", "3", "4" }, s, awful.layout.layouts[default_layout])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8" }, s, awful.layout.layouts[default_layout])
 end)

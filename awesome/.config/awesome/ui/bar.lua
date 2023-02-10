@@ -14,7 +14,7 @@ awful.screen.connect_for_each_screen(function(s)
     position = "left",
     screen = s,
     width = dpi(50),
-    height = s.geometry.height - (beautiful.useless_gap * 12),
+    height = s.geometry.height - (beautiful.useless_gap * 4),
     ontop = true,
     visible = true,
   })
@@ -22,7 +22,7 @@ awful.screen.connect_for_each_screen(function(s)
   awful.placement.left(s.mywibar, { margins = beautiful.useless_gap })
 
   -- Create a textclock widget
-  s.clock = wibox.widget.textclock('<span color="#9e9d9e" font="Fira Code 15">%H%n%M</span>', 5)
+  s.clock = wibox.widget.textclock('<span color="#9e9d9e" font="JetBrainsMono Nerd Font 14">%H%n%M</span>', 5)
   s.clock.align = "center"
 
   -- Remove wibar on full screen
@@ -68,7 +68,7 @@ awful.screen.connect_for_each_screen(function(s)
         right = dpi(12),
         layout = wibox.container.margin,
       },
-      require('ui.taglist')(s),
+      require('ui.my_taglist')(s),
       layout = wibox.layout.fixed.vertical,
     },
 

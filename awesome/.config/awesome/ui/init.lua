@@ -1,2 +1,2 @@
 require('ui.bar')
--- require('ui.bar_top')
+-- require('ui.top_bar')

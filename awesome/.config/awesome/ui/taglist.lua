@@ -22,7 +22,7 @@ local function render_taglist(s)
     screen  = s,
     filter  = awful.widget.taglist.filter.all,
     style   = {
-      shape = gears.shape.circle
+      shape = gears.shape.circle,
     },
     layout   = {
       spacing = dpi(10),
