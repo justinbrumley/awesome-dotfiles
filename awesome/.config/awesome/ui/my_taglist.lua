@@ -57,7 +57,7 @@ local get_taglist = function(s)
           id = 'margin_role',
           widget = wibox.container.margin,
           left = dpi(16),
-          right = dpi(16),
+          right = dpi(15),
           align = 'center',
         },
         id = 'background_role',
