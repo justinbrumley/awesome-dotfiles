@@ -2,6 +2,7 @@
 -- terminal = "xfce4-terminal"
 terminal = "alacritty"
 browser = "firefox"
+pulsemixer = "gtk-launch audio-mixer"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 -- ============================================
