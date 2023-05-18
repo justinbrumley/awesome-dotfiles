@@ -2,4 +2,4 @@
 
 ## Screenshots
 
-![image](https://user-images.githubusercontent.com/7034681/236849595-fb985a67-4a28-474b-b3af-0b84bc078433.png)
+![image](https://github.com/justinbrumley/awesome-dotfiles/assets/7034681/6ce923a2-2d8e-4c55-9a8b-492f3ad988a8)
