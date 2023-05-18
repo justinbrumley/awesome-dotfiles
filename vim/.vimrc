@@ -51,19 +51,6 @@ else
   endif
 endif
 
-# Netrw File Tree
-g:netrw_banner = 0
-g:netrw_liststyle = 3
-g:netrw_browse_split = 4
-g:netrw_altv = 1
-g:netrw_winsize = 15
-
-# augroup ProjectDrawer
-#   autocmd!
-#   autocmd VimEnter * :Vexplore
-#   autocmd VimEnter * wincmd l
-# augroup END
-
 # Open Quickfix
 nnoremap <C-c> :copen<CR>
 
@@ -141,7 +128,7 @@ g:syntastic_check_on_open = 0
 g:syntastic_check_on_wq = 0
 g:syntastic_mode_map = { "mode": "active" }
 g:syntastic_javascript_checkers = ['eslint']
-g:syntastic_typescript_checkers = ['tslint']
+g:syntastic_typescript_checkers = ['eslint']
 
 # Rust
 g:rustfmt_autosave = 1

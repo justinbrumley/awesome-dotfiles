@@ -8,7 +8,7 @@ local theme_path = string.format("%s/.config/awesome/theme/", os.getenv("HOME"))
 
 -- Possible Wallpapers: anime.png, waves.jpg, desert.png, scenary.png
 
-local primary_wallpaper = theme_path.."anime.png"
+local primary_wallpaper = theme_path.."satanic.png"
 local secondary_wallpaper = theme_path.."scenary.png"
 -- ============================================
 

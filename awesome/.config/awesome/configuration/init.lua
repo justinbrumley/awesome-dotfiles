@@ -9,6 +9,7 @@ editor_cmd = terminal .. " -e " .. editor
 
 require('configuration.errors')
 require('configuration.keys')
+require('configuration.mouse')
 require('configuration.rules')
 -- ============================================
 

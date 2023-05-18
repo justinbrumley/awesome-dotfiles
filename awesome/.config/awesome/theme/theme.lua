@@ -18,7 +18,7 @@ theme.font          = "Fira Sans 8"
 
 theme.border_width = 0
 
-theme.bg_normal     = "#1b1e25"
+theme.bg_normal     = "#121a18"
 theme.bg_light      = "#15498a"
 theme.bg_focus      = "#535d6c"
 theme.bg_urgent     = "#ff0000"
