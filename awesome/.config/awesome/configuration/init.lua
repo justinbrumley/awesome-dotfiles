@@ -1,6 +1,6 @@
 -- This is used later as the default terminal and editor to run.
 -- terminal = "xfce4-terminal"
-terminal = "alacritty"
+terminal = "kitty"
 browser = "firefox"
 pulsemixer = "gtk-launch audio-mixer"
 editor = os.getenv("EDITOR") or "vim"

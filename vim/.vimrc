@@ -128,7 +128,7 @@ g:syntastic_check_on_open = 0
 g:syntastic_check_on_wq = 0
 g:syntastic_mode_map = { "mode": "active" }
 g:syntastic_javascript_checkers = ['eslint']
-g:syntastic_typescript_checkers = ['eslint']
+# g:syntastic_typescript_checkers = ['eslint']
 
 # Rust
 g:rustfmt_autosave = 1
